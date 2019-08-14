@@ -1,16 +1,22 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: webapp1
+  name: demoapp-deployment
+  namespace: demoapp
+  labels:
+    app: demoapp
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      app: demoapp
   template:
     metadata:
       labels:
-        app: webapp1
+        app: demoapp
     spec:
       containers:
-      - name: webapp1
+      - name: demoapp-container
         image: vembubalaji/demoapp1:v1
         ports:
         - containerPort: 8080

@@ -61,6 +61,14 @@
 	  {
         "file": "ingress-deployment.yml",
         "target": "~/ingress/"
+      },
+	  {
+        "file": "ingress-rules.yml",
+        "target": "~/ingress/"
+      },
+	  {
+        "file": "ingress.yml",
+        "target": "~/ingress/"
       }
     ]
   }

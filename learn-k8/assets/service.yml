@@ -1,11 +1,16 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: webapp1-svc
+  name: demoapp-service
   labels:
-    app: webapp1
+    name: demoapp
+  namespace: demoapp
 spec:
-  ports:
-  - port: 8080
+  type: NodePort
   selector:
-    app: webapp1
+    app: demoapp
+  ports:
+    -
+      name: http
+      port: 8080
+      targetPort: 8080
