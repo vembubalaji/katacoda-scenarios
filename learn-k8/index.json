@@ -47,8 +47,20 @@
 	"assets": {   
     "host01": [
       {
-        "file": "*",
+        "file": "deployment.yml",
         "target": "~/"
+      },
+	  {
+        "file": "service.yml",
+        "target": "~/"
+      },
+	  {
+        "file": "ingress-service.yml",
+        "target": "~/ingress/"
+      },
+	  {
+        "file": "ingress-deployment.yml",
+        "target": "~/ingress/"
       }
     ]
   }
