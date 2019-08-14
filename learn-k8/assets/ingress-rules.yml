@@ -1,0 +1,20 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: webapp-ingress
+spec:
+  rules:
+  - host: my.kubernetes.example
+    http:
+      paths:
+      - path: /hello
+        backend:
+          serviceName: webapp1-svc
+          servicePort: 8080
+      - path: /HelloFromApp2
+        backend:
+          serviceName: webapp2-svc
+          servicePort: 8080
+      - backend:
+          serviceName: webapp3-svc
+          servicePort: 8080

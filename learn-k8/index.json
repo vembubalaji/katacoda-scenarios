@@ -45,6 +45,14 @@
       "text": "finish.md"
     }
   },
+  "assets": {   
+    "host01": [
+      {
+        "file": "*",
+        "target": "~/"
+      }
+    ]
+  }
   "environment": {
     "uilayout": "terminal-terminal"
   },
