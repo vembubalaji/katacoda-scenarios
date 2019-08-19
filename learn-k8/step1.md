@@ -34,3 +34,7 @@ https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com
 ## Markdown
 
 https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com
+
+
+
+sed 's/HOST_IP/[[HOST_IP]]/g' assets\ingress.yml {{execute}}
