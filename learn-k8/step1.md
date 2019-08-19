@@ -1,69 +1,33 @@
-Katacoda has extended Markdown to simplify the users interaction while completing the scenarios and encounter less mistakes.
+In this step you will learn how to check the status and the configuration of your k8s cluster.
 
-## Copy to Clipboard
-
-This extension will copy the command or text to the clipboard.
-
-Markdown: 
-<pre>`echo "Copy to Clipboard"`{{copy}}</pre>
-
-Results:
-`echo "Copy to Clipboard"`{{copy}}
-
-## Execute in Terminal
-
-Katacoda has integration to automatically execute the commands for the terminal.
-
-This is done by adding `execute` to the markdown code block, for example:
-<pre>`echo "Run in Terminal"`{{execute}}</pre>
+## Task
 
 This creates:
 `echo "Run in Terminal"`{{execute}}
 
-## Interrupt
+First you need to make sure that your cluster is running, so please run:
+`kubectl cluster-info`{{execute}}
 
-When the user has long running commands, such as a watch, it can be useful to ensure that this is stopped but the user runs the next command. 
+Then you can query the K8s API to find out the nodes running in the cluster:
+`kubectl get nodes` {{execute}}
 
-<pre>`echo "Send Ctrl+C before running Terminal"`{{execute interrupt}}</pre>
 
-`echo "Send Ctrl+C before running Terminal"`{{execute interrupt}}
+We would first create our specific namespace. Check out the pre-loaded YAML file:
+`cat ns.yml` {{execute}}
 
-## Keyboard Icons
+Now, we create the namespace `kubectl create -f ns.yml` {{execute HOST1}}
 
-This can also be helped by using Keyboard symbols to show users to use <kbd>Ctrl</kbd>+<kbd>C</kbd>
+Check how the namespaces have been created, what other namespaces are available `kubectl get namespace` {{execute}}
 
-The Markdown is:
-<pre>
-&#x3C;kbd&#x3E;Ctrl&#x3C;/kbd&#x3E;+&#x3C;kbd&#x3E;C&#x3C;/kbd&#x3E;
-</pre>
+Now, our namespace has been created. Let's move over to creating a deployment and with it k8 pods. Click on Continue... 
 
-## Execute on different hosts 
+Generated Web Link
+https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com
 
-When using the `terminal-terminal` layout and multiple hosts within the cluster, you can have commands executed on which host is required. This is used within our [Kubernetes scenarios](https://www.katacoda.com/courses/kubernetes/getting-started-with-kubeadm).
+## Markdown
 
-<pre>
-`echo "Run in Terminal Host 1"`{{execute HOST1}}
+https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com
 
-`echo "Run in Terminal Host 2"`{{execute HOST2}}
-</pre>
 
-`echo "Run in Terminal Host 1"`{{execute HOST1}}
 
-`echo "Run in Terminal Host 2"`{{execute HOST2}}
-
-## Execute in different Terminal windows
-
-When explaining complex systems, it can be useful to run commands in a separate terminal window. This can be run automatically by including the target Terminal number. 
-
-If the terminal is not open, it will launch and the command will be executed. 
-
-<pre>
-`echo "Run in Terminal 1"`{{execute T1}}
-
-`echo "Open and Execute in Terminal 2"`{{execute T2}}
-
-</pre>
-
-`echo "Run in Terminal 1"`{{execute T1}}
-
-`echo "Open and Execute in Terminal 2"`{{execute T2}}
+`sed 's/HOST_IP/[[HOST_IP]]/g' assets\ingress.yml` {{execute}}
