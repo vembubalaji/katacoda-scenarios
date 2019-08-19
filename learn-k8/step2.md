@@ -1,19 +1,12 @@
-## Now we have created our first namespace, let's go ahead with our deployments and hence the associated pods. Let's have a look at the yaml file. cat deployment.yml {{execute}}
+Now that we have verified the cluster is up and the nodes connected, let's create our first namespace. 
 
-## Note 1: We have requested for a single replication initially. Let's create the deployment and it's pods.  
+## Creating our first namespace
 
+Check out the pre-loaded YAML file:
+`cat ns.yml`{{execute}}
 
-## Note 2: We would be deploying it into our newly created namespace. kubectl create -f deployment.yml {{execute}}
+Now, we create the namespace. Run: `kubectl create -f ns.yml`{{execute}}
 
-## Check how the deployments have been created, Note: we would need to check into the specific namespace (the -n option).  kubectl get deployment -n demoapp {{execute}}
+Verify if the namespace has been created properly. Execute: `kubectl get namespace`{{execute}}
 
-## Now that our deployments are ready, let's expose it to external world and check out the result. Click on Continue...
-
-Generated Web Link
-https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com
-
-## Markdown
-
-https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com
-
-kubectl expose deployment hello-world --name=exposed-service --external-ip="[[HOST_IP]]" --port=80 --target-port=80{{execute}}
+Now that our namespace has been created. Let's move over to creating a deployment and with it k8 pods. Click on Continue... 

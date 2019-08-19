@@ -1,0 +1,1 @@
+`sed -i 's/HOST_IP/[[HOST_IP]]/g' ingress/ingress.yml`{{execute}}
