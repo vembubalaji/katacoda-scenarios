@@ -11,6 +11,7 @@ To check the status of ingress deployment and other details, run the below comma
 `kubectl get deployment -n nginx-ingress`{{execute}}
 
 We have the ingress server running, now, we need to configure the routes. Check the file ingress-rules.yml. `cat ingress-rules.yml`{{execute}}
+
 `kubectl create -f ingress/ingress-rules.yml`{{execute}}
 
 The rules apply to requests for the host my.kubernetes.example.
