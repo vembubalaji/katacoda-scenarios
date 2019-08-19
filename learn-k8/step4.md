@@ -16,4 +16,4 @@ This would create the service for the deployments. Check for the service and the
 
 Finally let's give a call to the deployed service.
 
-`curl http://172.17.0.68:8080/hello`{{execute}}
+`curl http://[[HOST_IP]]:8080/hello`{{execute}}
