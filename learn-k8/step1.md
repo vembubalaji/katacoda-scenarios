@@ -9,15 +9,15 @@ First you need to make sure that your cluster is running, so please run:
 `kubectl cluster-info`{{execute}}
 
 Then you can query the K8s API to find out the nodes running in the cluster:
-`kubectl get nodes` {{execute}}
+`kubectl get nodes`{{execute}}
 
 
 We would first create our specific namespace. Check out the pre-loaded YAML file:
-`cat ns.yml` {{execute}}
+`cat ns.yml`{{execute}}
 
-Now, we create the namespace `kubectl create -f ns.yml` {{execute HOST1}}
+Now, we create the namespace `kubectl create -f ns.yml`{{execute}}
 
-Check how the namespaces have been created, what other namespaces are available `kubectl get namespace` {{execute}}
+Check how the namespaces have been created, what other namespaces are available `kubectl get namespace`{{execute}}
 
 Now, our namespace has been created. Let's move over to creating a deployment and with it k8 pods. Click on Continue... 
 
@@ -30,4 +30,4 @@ https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com
 
 
 
-`sed 's/HOST_IP/[[HOST_IP]]/g' assets\ingress.yml` {{execute}}
+`sed 's/HOST_IP/[[HOST_IP]]/g' assets\ingress.yml`{{execute}}
