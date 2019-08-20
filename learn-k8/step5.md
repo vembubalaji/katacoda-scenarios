@@ -1,6 +1,6 @@
 Now that we have seen how to deploy and create services for a container, let's see how to scale them up or down;
 
-## Scaling and descaling.
+## Scaling up and Scaling down
 
 If we need to increase the number of deployments for a particular deployment and hence it's corresponding pods, then we can run the following command;
 

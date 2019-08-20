@@ -17,3 +17,11 @@ This would create the service for the deployments. Check for the service and the
 Finally let's give a call to the deployed service.
 
 `curl http://[[HOST_IP]]:8080/hello`{{execute}}
+
+Let's tail the logs..
+
+`kubectl -n demoapp logs -f deployment/demoapp-deployment --all-containers=true`{{execute}}
+
+And run the curl from the second host.
+
+`curl http://[[HOST_IP]]:8080/hello`{{execute HOST2}}
