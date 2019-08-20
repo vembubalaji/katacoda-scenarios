@@ -7,6 +7,6 @@ Check out the pre-loaded YAML file:
 
 Now, we create the namespace. Run: `kubectl create -f ns.yml`{{execute}}
 
-Verify if the namespace has been created properly. Execute: `kubectl get namespace`{{execute}}
+Verify if the namespace has been created. Execute: `kubectl get namespace`{{execute}}
 
-Now that our namespace has been created. Let's move over to creating a deployment and with it k8 pods. Click on Continue... 
+Now that our namespace has been created, let's move over to creating a deployment and with it k8 pods. Click on **Continue**...

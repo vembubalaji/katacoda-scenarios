@@ -1,4 +1,7 @@
 Now that we have the deployments and services ready, let's create an ingress deployment and service.
+
+## Creating Ingress deployment and Service
+
 The YAML file ingress.yaml defines a Nginx-based Ingress controller together with a service making it available on Port 80 to external connections using ExternalIPs. 
 
 To update the host ip in the YAML file, run the below command:

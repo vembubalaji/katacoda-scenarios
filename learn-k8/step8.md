@@ -1,4 +1,5 @@
-## Test ingress rules
+
+## Test the ingress rules
 
 To verify the ingress rules, run the folloing commands to reach to the respective services/deployments/pods
 
